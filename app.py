@@ -5,7 +5,7 @@ from PIL import Image
 import numpy as np
 import webbrowser
 
-st.set_page_config(layout="wide", page_title="Flower Classification", page_icon=":Flower")
+st.set_page_config(layout="wide", page_title="Flower Classification", page_icon="Flower")
 
 st.title("Flower Classification Model [Tensorflow]")
 st.markdown("Rana Karmakar [Website](https://rana-reflective-porcupine-pf.eu-gb.mybluemix.net)")
