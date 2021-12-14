@@ -11,7 +11,7 @@ st.title("Flower Classification Model [Tensorflow]")
 st.markdown("Rana Karmakar [Website](https://rana-reflective-porcupine-pf.eu-gb.mybluemix.net)")
 c1, c2 = st.columns(2)
 with c1:
-    uploaded_file = st.file_uploader("Choose an Image", accept_multiple_files=False)
+    uploaded_file = st.file_uploader("Please Upload Images of Daisy, Dandelion, Roses, Sunflowers, Tulips Flowers only", accept_multiple_files=False)
     class_names = ['Daisy', 'Dandelion', 'Roses', 'Sunflowers', 'Tulips']
     if uploaded_file is not None:
         image = Image.open(uploaded_file)
@@ -32,24 +32,25 @@ with c1:
                         mime="image/png"
                     )
     else:
-        with open("training_results.png", "rb") as file:
+        
+
+if uploaded_file is None:
+    st.header("“Love is the flower you’ve got to let grow.” - John Lennon")
+with c2:
+    with open("training_results.png", "rb") as file:
             btn = st.download_button(
                 label="Model Performance",
                 data=file,
                 file_name="training_results.png",
                 mime="image/png"
             )
-
-if uploaded_file is None:
-    st.header("“Love is the flower you’ve got to let grow.” - John Lennon")
-with c2:
     st.write("Demonstration on How tensorflow works with Image Data, You can Download Sample Images [from here]("
              "https://unsplash.com/s/photos/daisy%2C-dandelion%2C-roses%2C-sunflowers%2C"
              "-tulips)")
     if uploaded_file is not None:
         st.image(uploaded_file)
     else:
-        st.subheader("Please Upload Images of Daisy, Dandelion, Roses, Sunflowers, Tulips Flowers only")
+        st.subheader("")
 
 
 # Conclusion
