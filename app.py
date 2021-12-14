@@ -31,7 +31,6 @@ with c1:
                         file_name="model_summary.png",
                         mime="image/png"
                     )
-    else:
         
 
 if uploaded_file is None:
